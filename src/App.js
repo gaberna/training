@@ -1,8 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Container from "./components/Container";
 
-function App() {
+
+export default class App extends React.Component {
+  render(){
+    return(
+      <div>
+      <Header/>
+      <Container/>
+      <Footer/>
+      </div>     
+        
+    )   
+  }
+}
+
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+*/
