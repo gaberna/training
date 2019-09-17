@@ -1,9 +1,11 @@
-aside{
+.sidebar{
+    display: inline-flex;
+    flex-direction: row;
     width: 25%;
     text-align: center;
     background: #1abc3d;
     color: white;
     font-size: 40px;
-    height: 10em;
-    display: inline-block;
-    }
+ 
+    
+}

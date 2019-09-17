@@ -1,15 +1,28 @@
 import React from 'react';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Container from "./components/Container";
+import Header from "../layouts/Header";
+import Footer from "../layouts/Footer";
+import Container from "../layouts/Container";
+
 
 
 export default class App extends React.Component {
-  render(){
+  constructor(props) {
+    super(props);
+    this.handleKeystroke = this.handleKeystroke.bind(this);
+    this.state = { lookingLetter: "" };
+  }
+
+  handleKeystroke(lookingLetter) {
+    this.setState({ lookingLetter });
+    console.log(lookingLetter);
+  }
+
+render(){
+
     return(
       <div>
-      <Header/>
-      <Container/>
+      <Header  onKeystroke={this.handleKeystroke} />
+      <Container onKeystroke={this.state.lookingLetter}/>
       <Footer/>
       </div>     
         

@@ -5,7 +5,7 @@ class Aside extends React.Component{
     render(){
         return(
             <aside className = {style.aside}>
-                Right Side
+                
             </aside>
         )
     }
